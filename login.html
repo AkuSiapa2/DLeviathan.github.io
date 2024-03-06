@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Login Berkah</title>
+</head>
+<body>
+  
+  <div class="content">
+    <div id="login-form">
+    <form onsubmit="login(event)">
+            <h2>LOGIN HERE</h2>
+            <br>
+            <img src="./assets/images/logo.jpg">
+            <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+            <input type="password" id="password" name="password" placeholder="Sandi" required>
+            <button class="login" type="submit"><a href="#">Login</a></button>
+            
+            <p class="link">Tidak punya akun?<br><a href="#">Daftar Disini</a></p>
+            <p class="log">masuk dengan</p>
+            <div class="social">
+              <a href="https://m.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://twitter.com/login?lang=id"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://accounts.google.com/AddSession?service=wise&continue=https://sites.google.com/new/?hl%3Did&hl=id&ec=GAlAkgM&authuser=0"><i class="fa-brands fa-google"></i></a>
+            </div>
+          </form>
+          </div>
+        </div>
+        
+        <script>
+        function login(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === 'yinyang@gmail.com' && password === 'kehidupan') {
+                alert('Login berhasil!');
+                window.location.href = 'berkah.html';
+            } else {
+                alert('Login gagal. Coba lagi.');
+            }
+        }
+    </script>
+        
+</body>
+</html>
